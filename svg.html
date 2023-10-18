@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test Web Page</title>
+        <script language="javascript">
+            function Red(evt) {
+                var circle = evt.target;
+                circle.setAttribute("style", "fill: red");
+            }
+            function Green(evt) {
+                var circle = evt.target;
+                circle.setAttribute("style", "fill: green");
+            }
+        </script> 
+    </head>
+    <body>
+         
+
+        <svg> 
+        <rect id="lightStandard" x="100" y="10" width="60" height="50" fill="black"/> 
+        <circle id="redLight" cx="129" cy="145" r="25" fill="red"/> 
+        <circle id="amberLight" cx="129" cy="205" r="25" fill="yellow"/> 
+        <circle id="greenLight" cx="129" cy="265" r="25" fill="green"/> 
+        </svg>  
+         
+
+    </body>
+</html>

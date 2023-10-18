@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <script>
+        window.onload = function () {
+
+            var drawingSurface = document.getElementById("drawingSurface");
+            var ctxt = drawingSurface.getContext("2d");
+            var img = new Image();
+            img.src = "orange.jpg";
+            img.onload = function () {
+                ctxt.drawImage(img, 100, 100);
+                ctxt.stroke();
+            }
+
+
+        };
+
+        window.onload = function () {
+            var drawingSurface = document.getElementById("drawingSurface");
+            var ctxt = drawingSurface.getContext("2d");
+            ctxt.strokeText("1. Text with default font", 150, 100);
+
+            ctxt.font = "24px arial";
+            ctxt.strokeStyle = "Red";
+            ctxt.strokeText("3. Text with altered colored font", 100, 160);
+        }
+    </script>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+
+    <body>
+
+        <canvas id="drawingSurface" width="600" height="400">
+            Your browser does not support HTML5.
+        </canvas>
+
+    </body>
+</html>

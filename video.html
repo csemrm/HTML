@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <script type="text/javascript">
+        var movieid;
+        window.onload = function (){
+            movieid = document.getElementById('movie');
+        }
+        function  play() {
+            movieid.play();
+        }
+        function  pause() {
+            movieid.pause();
+        }
+        function  back() {
+            movieid.currentTime -= 3;
+        }
+    </script>
+    <body>
+        <video id="movie" width="320" height="240" controls autoplay>
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+
+        <button  onclick=" play()" > Play </button>
+        <button  onclick=" pause()" > pause </button>
+        <button onclick=" back()"> back </button>
+
+    </body>
+</html>
