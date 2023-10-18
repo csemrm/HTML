@@ -16,17 +16,23 @@
 
     </head>
     <body>
+        <form action="/" method="GET"  >
         <section>
             Key:
             <input type="text" id="toStorageKey"/>
+
+
             Value:
             <input type="text" id="toStorageValue"/><br/>
+
+
         </section>
         <section>
-            <button type="button" id="btnAdd">Add To Storage</button>
-            <button type="button" id="btnRemove">Remove from Storage</button>
+            <button type="submit" id="btnAdd"> Storage</button>
+            <button type="button" id="btnRemove">Remove </button>
             <button type="button" id="btnClear">Clear Storage</button>
         </section>
+        </form>
         <div id="storage">
             <p>Current Storage Contents</p>
         </div>
@@ -36,22 +42,21 @@
             window.onload = function () {
 
                 LoadFromStorage();
-
                 document.getElementById("btnAdd").onclick = function () {
 
                     var toStorageKey = document.getElementById("toStorageKey").value;
                     var toStorageValue = document.getElementById("toStorageValue").value;
-                    localStorage.setItem(toStorageKey, toStorageValue);
+                    sessionStorage.setItem(toStorageKey, toStorageValue);
 
-             //       var customer = new Object();
-              //      customer.firstName = "Rick";
-              //      customer.lastName = "Delorme";
-               //     customer.shirtSize = "XL";
-                ///    localStorage.setItem("cart1", JSON.stringify(customer));
+                    //       var customer = new Object();
+                    //      customer.firstName = "Rick";
+                    //      customer.lastName = "Delorme";
+                    //     customer.shirtSize = "XL";
+                    ///    localStorage.setItem("cart1", JSON.stringify(customer));
 
 
 
-                    LoadFromStorage();
+                    //    LoadFromStorage();
 
 
                 };
@@ -78,6 +83,7 @@
                             var row = document.createElement("tr");
                             var key = document.createElement("td");
                             var val = document.createElement("td");
+                            
                             key.innerText = localStorage.key(i);
                             val.innerText = localStorage.getItem(key.innerText);
                             row.appendChild(key);

@@ -1,4 +1,4 @@
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" manifest="webApp.appcache">
     <head>
         <meta charset="utf-8"/>
         <title></title>
@@ -8,14 +8,14 @@
 
             window.onload = function () {
                 geoLocator = window.navigator.geolocation;
-                var posOptions = {enableHighAccuracy: true, timeout: 400};
+                var posOptions = {enableHighAccuracy: true, timeout: 1200};
                 geoLocator.getCurrentPosition(successPosition, errorPosition,
                         posOptions);
 
-                watcher = geoLocator.watchPosition(successPosition, errorPosition, posOptions);
+              watcher = geoLocator.watchPosition(successPosition, errorPosition, posOptions);
             };
             function successPosition(pos) {
-               // alert('Suceced: ' + pos);
+           //  alert('Suceced: ' + pos);
  
                 var sp = document.createElement("p");
                 sp.innerText = "Latitude: " + pos.coords.latitude +
@@ -35,7 +35,7 @@
     </head>
     <body>
         <div id="geoResults">
-            <p>Current Location is:</p>
+            <!<!-- comment -->   <p>Current Location is:</p>
         </div>
     </body>
 </html>

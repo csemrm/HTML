@@ -5,29 +5,22 @@
         <title></title>
         <style>
             #orange1 {
-                height: 150px;
+                height: 215px;
                 width: 225px;
+                
+                left: 200px; top: 200px;
             }
             .trans
             {
-                <!-- transform: scale(2.5);
-                -->
-                <!-- transform: rotate(145deg);
-                -->
-                <!-- transform: translate(150px,70px);
-                -->
-                <!-- transform: skew(10deg, 25deg);
-                -->
-
-                <!-- combitation  -->
-             <!--    transform: translate(150px,75px) scale(1.7) skew(15deg, 10deg); -->
-
+             transform: translate(150px,75px) scale(1.7) skew(15deg, 10deg); 
+               
+            
             }
         </style>
         
     </head>
     <body>
-        <img id="orange1" src="orange.jpg" style="position:relative"/>
+        <img id="orange1" src="orange.jpg" class="trans" style="position:relative"/>
         <script>
             window.onload = function () {
                 document.getElementById("orange1").onclick = function () {
