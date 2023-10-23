@@ -1,0 +1,277 @@
+<html>
+
+    <body>
+
+        <div id="sportsList">
+            <script>
+                /*
+                 var sportsArray = ['soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby'];
+                 sportsArray.sort().forEach(offerSport(0, 0, sportsArray));
+                 sportsArray.forEach(offerSport);
+                 
+                 function offerSport(value, index, array) {
+                 var sportsList = document.getElementById("sportsList");
+                 var bullet = document.createElement("li");
+                 bullet.innerText = value;
+                 sportsList.appendChild(bullet);
+                 }
+                 
+                 for (var i = 0; i < 10; i++) {
+                 document.write(i);
+                 }
+                 
+                 document.write('   ');
+                 
+                 for (var i = 10; i > 0; i--) {
+                 document.write(i);
+                 }
+                 
+                 document.write('   ');
+                 for (var i = 1; i < 100; i *= 2) {
+                 document.write(i);
+                 document.write("<br />");
+                 }
+                 
+                 document.write('   ');
+                 var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+                 for (var i = 0; i < alphabet.length; i++) {
+                 document.write(alphabet[i]);
+                 document.write("<br />");
+                 }
+                 
+                 var person = {firstName: "Jane", lastName: "Doe", birthDate: "Jan 5, 1925", gender: "female"};
+                 for (var prop in person) {
+                 document.write(prop);
+                 }
+                 
+                 document.write('   ');
+                 
+                 var person = {firstName: "Jane", lastName: "Doe", birthDate: "Jan 5, 1925", gender:
+                 "female"};
+                 for (var prop in person) {
+                 document.write(person[prop]);
+                 }*/
+            </script>
+        </div>
+        <script>
+
+            /* comments */
+            // comments
+            /* 
+             *  var userAge = prompt("Age", " ");
+             var gender = prompt("gender", " ");
+             
+             //var userAge = 10, gender = 'M';
+             var minimumAge = 11;
+             
+             // 10 > 11 ==  false 
+             
+             //  left is less then right 
+             
+             if (userAge > minimumAge) {
+             
+             if (gender == 'M') {
+             //do logic for above age male 
+             console.log('Hombre');
+             } else {
+             //do logic for above age female. 
+             console.log('Mujer');
+             }
+             } else if (gender == 'M') {
+             //do logic for underage male 
+             console.log('Nino');
+             } else {
+             //do logic for underage female. 
+             // console.log('Nina');
+             }
+             
+             
+             if (true) {
+             
+             } else {
+             
+             
+             }
+             
+             if (true) {
+             
+             } else if (true) {
+             
+             } else if (true) {
+             
+             } else if (true) {
+             
+             } else if (true) {
+             
+             } else if (true) {
+             
+             } else if (true) {
+             
+             } else {
+             
+             }
+             
+             var value = 10; // data type is int
+             
+             var value2 = '10'; // data type is string 
+             */
+
+            var backgroundColor = 'red';
+
+            switch (backgroundColor) {
+                case 'yellow':
+                    console.log('yellow');
+                case 'green':
+                    console.log('proceed');
+                    break;
+                case 'red':
+                    console.log('stop');
+                    break;
+                default:
+                    console.log('unknown condition');
+                    break;
+            }
+
+            console.log(backgroundColor == 'red' ? "this true" : "this false");
+
+            // Using the length property
+            var anArray = new Array(5);
+            //   [1,2,3,5,6]
+            console.log(anArray.length);
+
+
+            anArray[9] = 'soccer';
+
+            console.log(anArray);
+
+
+
+            //var myarray = [100 => 343,234.0,3243,234,'34ew',3,3243,234,343,343,34];
+
+
+            var multiArray = new Array(3);
+            multiArray[0] = new Array(3);
+            multiArray[1] = new Array(3);
+            multiArray[2] = new Array(3);
+
+            var anArray = new Array(5);
+            console.log(anArray.length);
+
+//Using the concat method
+            var sports = new Array('football ', 'cricket ', 'rugby ', 'tennis ', 'badminton ');
+
+
+            var moreSports = new Array(' soccer', ' basketball', ' hockey');
+
+
+            var combinedSports = sports.concat(moreSports);
+            console.log(combinedSports);
+
+// Using the indexOf and lastIndexOf methods
+
+            var sports = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+            var index = sports.indexOf('football');
+            console.log(index);
+
+            var sports = new Array('soccer', 'basketball', 'hockey', 'cricket', 'football', 'rugby', 'tennis', 'badminton');
+            var index = sports.lastIndexOf('football', sports.length);
+            console.log('lastIndexOf: ' + index);
+//Using the join method 
+
+            var sports = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+            var joined = sports.join(':->:');
+            console.log(joined);
+//Using the reverse method
+
+            var sports = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+            console.log(sports.reverse());
+// Using the sort method
+            console.log('sort method');
+            var sports = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+            console.log(sports.indexOf('soccer'));
+            sports.sort();
+            console.log(sports);
+
+
+
+// Using the slice method
+
+            var sports = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby',
+                    'tennis', 'badminton');
+            var someSports = sports.slice(1, 2);
+            console.log('slice ' + someSports);
+
+//Using the splice method
+
+            var sports = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+            var splicedItems = sports.splice(2, 3, 'golf', 'curling', 'darts');
+            console.log('splicedItems: ' + splicedItems);
+            console.log(' Using the splice method sports :' + sports);
+
+
+            var sports = new Array();
+            sports.push('soccer', 'basketball', 'hockey');
+            sports.push('football');
+            var nextSport = sports.pop();
+            console.log(nextSport);
+
+            var sports = new Array();
+            sports.unshift('soccer', 'basketball', 'hockey');
+            sports.unshift('football');
+            sports.unshift('tejo');
+            var nextSport = sports.shift();
+            console.log(nextSport);
+
+            var sports = new Array();
+            sports.push('soccer');
+            sports.push('basketball');
+            sports.push('hockey');
+            var get1 = sports.shift();
+            console.log('First ' + sports.length);
+            console.log('1. sports.shift: ' + get1);
+            var get1 = sports.pop();
+            console.log('1. sports.pop: ' + get1);
+
+            sports.push('golf');
+            console.log('Second ' + sports.length);
+            var get2 = sports.shift();
+            console.log('2. sports.shift: ' + get2);
+            var get2 = sports.pop();
+            console.log('2. sports.pop: ' + get2);
+            console.log('Thist  ' + sports.length);
+
+            var evenNumbers = new Array(0, 2, 4, 6, 8, 9, 10, 12);
+            var allEven = evenNumbers.some(evenNumberCheck, evenNumbers);
+            if (allEven) {
+                console.log('Pair');
+            } else {
+                console.log('Odd');
+            }
+            function evenNumberCheck(value, index, array) {
+                return (value % 2) == 0;
+            }
+
+
+            var sportsArray = ['123213 soccer', '123213 basketball', '123213 hockey', '123213 football', '123213 cricket', '123213 rugby'];
+
+
+            sportsArray.forEach(offerSport);
+
+            function offerSport(value, index, array) {
+                var sportsList = document.getElementById("sportsList");
+                var bullet = document.createElement("li");
+                bullet.innerText = value;
+                sportsList.appendChild(bullet);
+                // sportsArray.sort().forEach(offerSport);
+            }
+
+            var numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+            function squareNumber(value) {
+                return (value % 2) !== 0;
+            }
+            var squares = numbers.filter(squareNumber);
+
+            console.log(squares);
+        </script>
+    </body>
+</html>
