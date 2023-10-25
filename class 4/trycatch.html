@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Division Calculator</title>
+    </head>
+    <body>
+        <h1>Division Calculator</h1>
+
+        <div>
+            <label for="dividend">Dividend</label>
+            <input type="number" id="dividend">
+        </div>
+
+        <div>
+            <label for="divisor">Divisor</label>
+            <input type="number" id="divisor">
+        </div>
+
+        <div>
+            <button onclick="calculateDivision()">Calculate Division</button>
+        </div>
+
+        <div id="result"></div>
+
+        <script>
+            function calculateDivision() {
+                var dividend = parseFloat(document.getElementById("dividend").value);
+                var divisor = parseFloat(document.getElementById("divisor").value);
+                var resultElement = document.getElementById("result");
+
+
+
+                try {
+                    if (isNaN(dividend) || isNaN(divisor)) {
+                        throw new Error("Please enter valid numbers.");
+                    }
+
+                    if (divisor === 0 || divisor === null) {
+                        throw new Error("Division by zero is not allowed.");
+                    } // 3434/000 = error
+
+                    var result = dividend / divisor;
+
+                    resultElement.innerHTML = "Result: " + result;
+
+                } catch (error) {
+                    resultElement.innerHTML = "Error: " + error.message;
+
+                }
+
+                /*finally {
+                 alert("finally");
+                 }
+                 */
+
+
+
+            }
+        </script>
+    </body>
+</html>

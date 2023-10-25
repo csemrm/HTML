@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Program flow Implementation</title>
+        <script>
+
+
+            window.onload = function () {
+
+
+                // alert(" this iswindow onload function ");
+               // document.getElementById('form').addEventListener('submit', onFormSubmit);
+               // document.getElementById('first_name').addEventListener('change', onInputChange);
+            }
+            function onFormSubmit(event) {
+                event.preventDefault();
+
+                first_name = document.getElementById('first_name').value;
+
+                last_name = document.getElementById('last_name').value;
+                email = document.getElementById('email').value;
+
+               // alert(first_name + ' ' + last_name + ' ' + email);
+
+
+                // alert("form submit event called.");
+            }
+            function onInputChange(event) {
+                console.log("input change event called.");
+            }
+            function onInputBlur(event) {
+                console.log(event);
+            }
+            function removeevent() {
+                document.getElementById('first_name').removeEventListener('change', onInputChange);
+            }
+            function onfocusevent() {
+              ///  alert('onfocusevent');
+            }
+            function onkeyupEvent(event) {
+                console.log('onkeyupEvent '+event);
+               // alert('onkeyupEvent');
+            }
+            function onfocusevent(){
+            //    alert('dd');
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Program flow Implementation</h1>
+        <section>
+            <form id="form" method="post">
+                <div>
+                    <label for="first_name">First Name</label>
+                    <input id="first_name" onblur="onInputBlur(this.value)" value="" onfocus="onfocusevent()" onfocusin="onfocusinEvet()" onkeyup="onkeyupEvent(this)" />
+                </div>
+                <div>
+                    <label for="last_name">Last Name</label>
+                    <input id="last_name" name="last_name" type="text" />
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" />
+                </div>
+                <div>
+                    <label for="url">URL</label>
+                    <input id="url" name="url" type="url" />
+                </div>
+                <div>
+                    <label for="aRange">Range</label>
+                    <input id="aRange" type="range" max="200" min="0" value="0" onchange="onInputChange()"  />
+                </div>
+                <div>
+                    <button type="reset">Reset</button>
+                    <button type="submit" >Submit </button>
+                </div>
+            </form>
+        </section>
+
+    </body>
+</html>

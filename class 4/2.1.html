@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Program flow Implementation </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script type="text/javascript">
+
+            // 0-1000//
+
+            // 0,1,2,3,4,5,6---1000 // i++ = i=i+
+
+            window.onload = function () {
+                max = 10; // 9< 10 = true;
+                for (var i = 0; i < max; i = i + 2) {
+
+
+                    const li = document.createElement('li');
+                    li.textContent = 'Item ' + i;
+                    document.getElementById('list').appendChild(li);
+                }
+
+
+
+
+
+                const   myarray = ['Alabama', 'Alaska', 'American Samoa'];//, 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'District of Columbia', 'Federated States of Micronesia', 'Florida', 'Georgia', 'Guam', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Marshall Islands', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Northern Mariana Islands', 'Ohio', 'Oklahoma', 'Oregon', 'Palau', 'Pennsylvania', 'Puerto Rico', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virgin Island', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
+
+                i = i - 1; // first iter = i = 2-1; 
+                // i ++ ;
+                // i -- ;
+                //  i = i+5;
+
+                for (var i = 2; i >= 0; i--) {
+                    li = document.createElement('li');
+                    li.textContent = myarray[i];
+                    document.getElementById('list_array').appendChild(li);
+                }
+
+                const   arrayAss = {
+                    'AL': 'Alabama',
+                    'AK': 'Alaska',
+                    'AZ': 'Arizona',
+                    'AR': 'Arkansas',
+                    'CA': 'California',
+                    'CO': 'Colorado',
+                    'CT': 'Connecticut',
+                };
+                for (key in arrayAss) { // for ..in
+                    li = document.createElement('li');
+                    li.textContent = key + ' continue  => ' + arrayAss[key];
+                    
+                    if (key == 'CA'){
+                        continue;
+                    }
+                    document.getElementById('list_obj').appendChild(li);
+
+                }
+
+
+
+                const data = [[1, 2, 3], [1, 3, 4], [4, 5, 6]];
+                data.forEach((student) => {
+                    student.forEach((data) => {
+                        console.log(data);
+                    });
+                });
+
+                for (var i = 0; i < data.length; i++) {
+                    li = document.createElement('li');
+                    ul = document.createElement('ul');
+
+                    for (var j = 0; j < data[i].length; j++) {
+                        // break;
+                        console.log(data[i][j]);
+                        li2 = document.createElement('li');
+                        li2.textContent = '[' + i + ']' + '[' + j + ']' + ' key => ' + data[i][j];
+                        ul.appendChild(li2);
+                    }
+                    li.appendChild(ul);
+
+                    document.getElementById('multi_array').appendChild(li);
+
+                }
+
+                i = 0, max = 10;
+
+                while (true) {
+                    const li = document.createElement('li');
+                    li.textContent = ' while ' + i;
+                    document.getElementById('list').appendChild(li);
+                    i++;
+
+                    if (i === 100) {
+                        break;
+                    }
+
+                }
+
+
+// do first and check later // do while loop
+i = 0;
+max = 10;
+                do {
+                    
+                   const li = document.createElement('li');
+                    li.textContent = 'do while ' + i;
+                    document.getElementById('list').appendChild(li);
+                    i++;
+
+                } while (i <= max);
+                
+
+                const length = 5;
+                i = 0;
+                while (i < length) {
+
+                    console.log('while i: ' + i);
+                    j = 0;
+                    while (j < length) {
+
+                        console.log('while i j: ' + i + ' j' + j);
+                        //break; continue;
+                        j++;
+                    }
+                    i++;
+
+                }
+            }
+
+
+        </script><!-- comment -->
+    </head>
+    <body>
+        <h1>Program flow Implementation</h1>
+
+        <section>
+            <header>
+                This section is for the array.
+            </header>
+            <article>
+                <h2> for loop with array  </h2>
+                <ul id="list">  </ul>
+
+
+
+                <h2> for loop with array  </h2>
+                <hr/>
+                <ul id="list_array">
+                </ul>
+
+
+
+
+                <h2> for-in loop with object  </h2>
+                <hr/>
+                <ul id="list_obj">
+
+                </ul>
+
+                <h2>multidimensional array javascript</h2>
+                <ul id="multi_array">
+
+                </ul>
+            </article>
+
+            <ul>
+                <li> p1 </li>
+                <li> p2 </li>
+                <li> p3 </li>
+                <li> p4 </li> 
+                <li> p5 </li>
+                <li> p6 </li>
+            </ul>
+        </section>
+
+    </body>
+</html>

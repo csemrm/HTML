@@ -1,0 +1,35 @@
+<html> 
+    <head> 
+        <script>
+
+
+
+            myEvent = new CustomEvent(
+                    "bodyLoadAction",
+                    {
+                        detail: {
+                            description: "a description of the custom event",
+                            timeofevent: new Date(),
+                            eventcode: 20},
+                        bubbles: true,
+                        cancelable: true,
+                        name: 'milon'
+                    }
+            );
+            function customEventHandler() {
+                console.log(window.event.detail);
+                alert(window.event.detail.eventcode);
+            }
+            document.addEventListener("bodyLoadAction", customEventHandler);
+
+            function onH1ClickHandler() {
+                document.dispatchEvent(myEvent);
+            }
+
+        </script> 
+    </head> 
+    <body> 
+        <button onclick="onH1ClickHandler()">Program flow Implementation</button>
+
+    </body> 
+</html> 
