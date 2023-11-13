@@ -1,0 +1,24 @@
+.w3-light-grey{
+    color:#000!important;
+    background-color:#f1f1f1!important
+}
+
+.w3-content,.w3-auto{
+    margin-left:auto;
+    margin-right:auto
+}
+.w3-content{
+    max-width:980px
+}
+.w3-auto{
+    max-width:1140px
+}
+.w3-margin{
+    margin:16px!important
+}
+.w3-margin-top{
+    margin-top:16px!important
+}
+.w3-margin-bottom{
+    margin-bottom:16px!important
+}

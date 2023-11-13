@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+
+            {
+
+            }
+            //  []    
+            function function_name() {
+
+            }
+
+
+            load();
+            function load() {
+
+            $("#list").empty();
+            $.get("https://react-app-f5919-default-rtdb.firebaseio.com/meals.json", function (data, status) {
+
+            if (status === 'success') {
+            let values = Object.values(data);
+            for (var i = 0; i < values.length; i++) {
+
+            console.log((values[i].name));
+            $("#list").append("<li>  "+  
+                    "Name: " + values[i].name + "<br>"+
+                    "Description " + values[i].description + "<br>"+
+                    "Price " + values[i].price + "<br>"+
+                    
+                    "</li>");
+            }
+            } else {
+
+            }
+            });
+            }
+            $("#submit").click(
+                    function () {
+
+
+
+                    var description = $('#description').val();
+                    var name = $('#title').val();
+                    var price = $('#price').val();
+                    var data = {
+                    description: description,
+                            name: name,
+                            price: price
+                    };
+                    
+                    if (name && description && price) {
+                    $.post("https://react-app-f5919-default-rtdb.firebaseio.com/meals.json", JSON.stringify(data), function (data, status) {
+                    if (status === 'success') {
+                    load();
+                    }
+                    });
+                    } else{
+                    alert(" error!");
+                    }
+                    }
+
+
+            );
+            }
+            );
+        </script>
+        <style>
+            div {
+                padding: 10px;
+                border: 1px solid #000;
+                margin-top: 20px;
+            }
+            label{
+
+            }
+            input{
+                height: 40px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <form onsubmit="return  false">
+            <div>
+                <label for="title">Name </label>
+                <input id="title" required=""  maxlength="50" />
+            </div>
+
+            <div>
+                <label for="description:">description: </label>
+                <textarea id="description" name="description" rows="5" spellcheck="true" cols="10"></textarea>
+            </div>
+
+            <div>
+                <label for="price">price </label>
+                <input id="price" type="number" max="10" />
+            </div> 
+            <div>
+                <button type="reset">Reset</button>
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </form>
+        <div>
+
+            <ul id="list">
+                <li>cc</li> 
+                <li>cc</li>
+                <li>cc</li>
+                <li>cc</li>
+            </ul>
+
+
+        </div>
+    </body>
+</html>

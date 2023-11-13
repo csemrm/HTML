@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--  https://css-tricks.com/snippets/css/a-guide-to-flexbox/ -->
+<html>
+    <head>
+        <style>
+            .flex-container {
+                display: flex;                
+                flex-direction:row;
+                flex-wrap:nowrap;
+                
+                flex-flow: row nowrap;  
+                
+                
+                justify-content:center;
+                align-items:flex-start;
+                
+                align-content:center center;
+                
+                row-gap: 10px;
+                column-gap: 20px;
+                
+                gap: 30px;
+            }
+
+            .flex-container div {
+                background-color: #f1f1f1;
+                margin: 10px;
+                padding: 20px;
+                font-size: 30px;
+                flex-grow: 1;
+            }
+            .item{
+                order: 2;
+                align-self: flex-end;
+                flex-basis: 1
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <h1>Create a Flex Container</h1>
+
+        <div class="flex-container">
+            <div class="item">1 child box</div>
+            <div>2 child box</div>
+            <div>3 child box</div>  
+            <div>4 child box </div>
+            <div>5  </div>
+            <div>6 child box</div>  
+
+        </div>
+
+    </body>
+</html>
+
+

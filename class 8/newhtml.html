@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("button").click(
+                        function () {
+                            $.post("https://react-app-f5919-default-rtdb.firebaseio.com/meals.json", JSON.stringify({
+                                description: "Finest fish and veggies",
+                                id: "m01",
+                                name: "Sushi",
+                                price: "22.99"
+                            }), function (data, status) {
+                                console.log(data);
+                               
+                            },'json');
+                        }
+
+
+                );
+            }
+            );
+        </script>
+    </head>
+    <body>
+
+        <button>Send an HTTP GET request to a page and get the result back</button>
+        
+        <iframe sandbox="allow-modals" src="../class 9/newhtml.html" > </iframe> 
+
+    </body>
+</html>

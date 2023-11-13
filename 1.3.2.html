@@ -1,32 +1,50 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html>
     <head>
-        <meta charset="utf-8"/>
-        <title></title>
         <style>
-            #orange1 {
-                height: 215px;
-                width: 225px;
-                
-                left: 200px; top: 200px;
+            body {
+                background-color: pink;
+                font-style: oblique;
             }
-            .trans
-            {
-             transform: translate(150px,75px) scale(1.7) skew(15deg, 10deg); 
-               
-            
+            h2{
+                background-color: red;
+                font-style: normal  !important;;
+            }
+            .h2ele{
+                background: green;
+            }
+            #idh2{
+                background-color: blue !important;
+                font-style: italic ;
+                
+                
+            }
+            a:link{
+                
+            }
+            a:hover{
+                font-size: 30px;
+                color: red;
+            }
+            a:visited{
+                font-size: 20px;
+            }
+            input:checked{
+                border: 3px solid activeborder;
             }
         </style>
-        
     </head>
     <body>
-        <img id="orange1" src="orange.jpg" class="trans" style="position:relative"/>
-        <script>
-            window.onload = function () {
-                document.getElementById("orange1").onclick = function () {
-                    this.classList.add("trans");
-                }
-            }
-        </script>
+
+        <div> 
+           cccc 
+            
+        </div>
+        <span>vvv</span>
+        
+        <a href="##">The media query will only apply if the media type is screen and the viewport is 480px wide or wider.</a>
+        <input type="checkbox" />
     </body>
 </html>
+
+
